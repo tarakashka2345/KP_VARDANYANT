@@ -36,30 +36,11 @@ background-position: center;
 .card-3 { background: linear-gradient(135deg, #6bffb0, #0b5e2e); }
 .card-4 { background: linear-gradient(135deg, #ffb86b, #b45f06); }
 
-
 .bad1{
-    display: inline-block;
-  animation: swing-vertical ease-in-out infinite;
   position: relative;
   right: 8cm;
-  bottom: 15cm;
+  bottom: 10cm;
+  
 }
-@keyframes swing-vertical{
-    0%, 100%{
-        transform: translateY(0);
-    }
-50%{
-    transform: translateY(-50px)
-}
-}
-.bad2{
-  position: relative;
-  right: -3cm;
-  bottom: 15cm;
-}
-.bad3{
-  position: relative;
-  right: 12cm;
-  bottom: 15cm;
-}
+
     
