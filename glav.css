@@ -1,0 +1,250 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ body {
+ background: #000000;
+ font-family: system-ui, sans-serif;
+ overflow-x: hidden;
+ }
+ nav {
+  position: relative;
+  left: 56cm;
+  width: 500px;
+  bottom: 10cm;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  background: none;
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Griffy";
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #8fc6f7;
+}
+
+
+h1{
+  color: white;
+  z-index: auto;
+  position: relative;
+  left: 28cm;
+  bottom: -2cm;
+  font-size: 160px;
+  font-family: "Griffy";
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+span{
+  position: relative;
+  left: 14cm;
+  bottom: 6cm;
+}
+p{
+  font-size: 30px;
+  font-family: 'Handlee';
+  position: relative;
+  bottom: 6cm;
+}
+.sticky-container {
+            position: relative;
+        }
+
+  
+        .sticky-card {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            position: sticky;
+            top: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 1000;
+            transition: opacity 0.8s ease-out;   
+        }
+
+        .card-1 {  background: url("back.png"); 
+background-color: linear-gradient(150deg, rgba(7, 60, 166, 1) 13%, rgba(0, 0, 0, 1) 56%);;
+        }
+        .card-2 { background: linear-gradient(135deg, #000000d8, #0b0328e5);
+         }
+        .card-3 { background: linear-gradient(135deg, #6bffb0, #0b5e2e); }
+        .card-4 { background: linear-gradient(135deg, #ffb86b, #b45f06); }
+
+
+
+.cloud1{
+  position: relative;
+  top: 9cm;
+  left: 5cm;
+  animation: Cload1 15s linear infinite;
+}
+@keyframes Cload1 {
+  0% {
+    transform: translateX(0); 
+  }
+  50% {
+    transform: translateX(50px); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+.cloud2{
+  position: relative;
+  top: 9cm;
+  right: 10cm;
+   animation: Cload2 15s linear infinite;
+}
+@keyframes Cload2 {
+  0% {
+    transform: translateX(0); 
+  }
+  50% {
+    transform: translateX(-50px); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+.cloud3{
+  position: relative;
+  top: 10cm;
+    right: 25cm;
+    width: 5500px;
+     animation: Cload3 15s linear infinite;
+}
+@keyframes Cload3 {
+  0% {
+    transform: translateX(0); 
+  }
+  50% {
+    transform: translateX(50px); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+video{
+  width: 500px;
+  position: relative;
+  right: 45cm;
+  z-index: -1;
+  bottom: 1cm;
+
+}
+.mon{
+  position: relative;
+  left:31cm;
+  width: 300px;
+  bottom: 8.5cm;
+}
+.but{
+  position: relative;
+  left: 78cm;
+  bottom: 10.8cm;
+  background-color: rgb(207, 248, 254);
+}
+.text {
+    line-height: 1.6;
+    color: #ffffff;
+     font-family: "Delius Swash Caps";
+  text-align: center;
+  font-size: 45px;
+color: #fff; 
+  text-shadow:
+    0 0 5px #fff,      
+    0 0 10px #fff,     
+    0 0 20px #088bcc,  
+    0 0 20px #76cef6, 
+    0 0 30px #c2cfff,  
+    0 0 40px #5bbef8,  
+    0 0 60px #ffade8; 
+}
+
+.line {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.9s ease forwards;
+    position: relative;
+    top: 5cm;
+}
+
+.line1 {
+    animation-delay: 1s;
+}
+
+.line2 {
+    animation-delay: 2s;
+}
+
+.line3 {
+    animation-delay: 3s;
+}
+
+.line4 {
+    animation-delay: 4s;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.flower{
+  width: 400px;
+  position: relative;
+  bottom: 11cm;
+  right: 18cm;
+transform-style: preserve-3d;
+animation: flower 8s ease-in-out infinite alternate;
+}
+@keyframes flower {
+  0% {
+    transform: translateY(0px) rotateY(0deg) scale(1);
+   
+  }
+  50% {
+    transform: translateY(300px) rotateY(20deg) scale(0.8); 
+  }
+  100% {
+    transform: translateY(100px)  rotateY(-15deg) scale(1.1); 
+  }
+}
+.buter{
+  width: 200px;
+  position: relative;
+  left: 12cm;
+  bottom: 9cm;
+  animation: buter 4s ease-in-out infinite;
+}
+@keyframes buter {
+  0% { opacity: 0; }
+  50% { opacity: 1; } 
+  100% { opacity: 0; } 
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-70px); 
+  }
+}
+
