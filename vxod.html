@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Вход</title>
+    <link rel="stylesheet" href="vxod.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="startScreen" class="screen start-screen active">
+        <button id="startButton" class="start-btn">START</button>
+        <div class="progress-container">
+            <div id="progressFill" class="progress-fill"></div>
+        </div>
+    </div>
+
+    <div id="registerScreen" class="screen register-screen">
+        <img class="buda" src="budda.png" alt="butt">
+        <form id="registrationForm">
+            <div class="progress-container-top">
+                <div id="formProgressFill" class="progress-fill-top"></div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="имя" required>
+            </div>
+            <div class="input-group">
+                <input type="number" id="age" placeholder="возраст" required>
+            </div>
+            <button type="submit" id="submitBtn">войти в пустоту</button>
+            <div id="errorMsg" class="error-message"></div>
+        </form>
+    </div>
+
+    <script src="vxod.js"></script>
+</body>
+</html>

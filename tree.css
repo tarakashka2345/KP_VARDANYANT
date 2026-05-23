@@ -1,0 +1,139 @@
+ body {
+            margin: 0;
+            min-height: 100vh;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', 'Montserrat', 'Arial', sans-serif;
+        }
+
+        .glow-container {
+            position: relative;
+            width: 90vw;
+            max-width: 1100px;
+            height: 90vh;
+            max-height: 800px;
+            background: #2c2c2e;       
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2),
+                        0 0 5px rgba(255,255,255,0.5),
+                        inset 0 0 15px rgba(0,0,0,0.5);
+            animation: borderGlow 3s infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                box-shadow: 0 0 8px rgba(220,220,255,0.3),
+                            0 0 20px rgba(180,180,200,0.2),
+                            inset 0 0 8px rgba(255,255,255,0.1);
+                border: 1px solid rgba(160,160,170,0.5);
+            }
+            100% {
+                box-shadow: 0 0 25px rgba(255,255,255,0.7),
+                            0 0 40px rgba(200,200,220,0.5),
+                            inset 0 0 15px rgba(255,255,255,0.2);
+                border: 1px solid rgba(240,240,255,0.9);
+            }
+        }
+
+        .glow-container canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 28px;
+        }
+
+        .info-text {
+            position: absolute;
+            bottom: 18px;
+            left: 20px;
+            color: #ccc;
+            background: rgba(30,30,35,0.7);
+            backdrop-filter: blur(6px);
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            pointer-events: none;
+            z-index: 20;
+            font-family: monospace;
+            border-left: 2px solid #aaa;
+        }
+
+        .controls-tip {
+            position: absolute;
+            bottom: 18px;
+            right: 20px;
+            color: #aaa;
+            background: rgba(30,30,35,0.6);
+            backdrop-filter: blur(6px);
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-size: 11px;
+            font-family: monospace;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #ececec;
+            background: rgba(20,20,25,0.6);
+            backdrop-filter: blur(5px);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            pointer-events: none;
+            z-index: 20;
+            border-bottom: 1px solid #aaa;
+        }
+
+        @media (max-width: 700px) {
+            .glow-container { width: 95vw; height: 85vh; border-radius: 24px; }
+            .title { font-size: 0.7rem; top: 12px; left: 12px; }
+            .info-text { font-size: 9px; bottom: 10px; left: 10px; }
+            .controls-tip { font-size: 8px; bottom: 10px; right: 10px; }
+        }
+
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+    color: white;
+    font-family: 'Arial', 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #5a5a5a, #3a3a3a);
+    text-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}

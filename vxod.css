@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Grenze Gotisch', cursive;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    background: radial-gradient(circle at 30% 20%, #111, #000);
+}
+
+.start-screen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.register-screen {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.start-btn {
+    background: none;
+    border: 2px solid #aaa;
+    color: #ddd;
+    font-family: 'Old English Text MT', 'Grenze Gotisch', 'Fraktur', monospace;
+    font-size: 3rem;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    letter-spacing: 4px;
+    transition: 0.3s;
+    backdrop-filter: blur(3px);
+    margin-bottom: 2rem;
+}
+
+.start-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+    text-shadow: 0 0 8px silver;
+    transform: scale(1.02);
+}
+
+.progress-container {
+    width: 260px;
+    height: 6px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(255,255,255,0.2);
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #bbb;
+    transition: width 0.08s linear;
+    box-shadow: 0 0 4px #fff;
+}
+
+.register-screen form {
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid #555;
+    width: 90%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    position: relative;
+    bottom: 10cm;
+}
+
+.progress-container-top {
+    width: 100%;
+    height: 6px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(255,255,255,0.2);
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill-top {
+    width: 0%;
+    height: 100%;
+    background: #bbb;
+    transition: width 0.15s ease-out;
+    box-shadow: 0 0 4px #fff;
+}
+
+.input-group input {
+    width: 100%;
+    font-family: 'Grenze Gotisch', monospace;
+    font-size: 1.6rem;
+    background: #1e1e1e;
+    border: 1px solid #777;
+    color: #eee;
+    padding: 10px 18px;
+    text-align: center;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #ccc;
+    box-shadow: 0 0 10px rgba(200,200,200,0.3);
+}
+
+#submitBtn {
+    background: #222;
+    border: 1px solid #aaa;
+    color: white;
+    font-family: 'Grenze Gotisch', serif;
+    font-size: 1.5rem;
+    padding: 8px 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+#submitBtn:hover {
+    background: #444;
+    border-color: #fff;
+}
+
+.error-message {
+    color: #c77;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -0.5rem;
+    min-height: 2rem;
+}
+
+.buda {
+    position: relative;
+    left: 15cm;
+    top: 5cm;
+    width: 500px;
+}
+
+@media (max-width: 600px) {
+    .start-btn { font-size: 2rem; letter-spacing: 4px; }
+    .progress-container { width: 200px; }
+    .input-group input { font-size: 1.2rem; }
+    #submitBtn { font-size: 1.2rem; }
+}
